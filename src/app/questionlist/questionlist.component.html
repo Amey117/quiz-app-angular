@@ -1,0 +1,17 @@
+<div *ngIf="showscore" >
+    <h1 class="display_result">Your Score is {{score}} out of {{numberof_qs}}</h1>
+</div>
+<button (click)="back_btn()" id="backbtn">Back To Options</button>
+<div class="wrapper">
+    <div class="question_container">
+        <div *ngFor="let que of questions;let i = index">
+            <app-question  [question]="que" [number]="i"
+                (userans)="storeallans($event)"></app-question>
+            <p [hidden]="showans" class="correct_answer">Correct Answer is {{que.correctAnswer}}</p>
+        </div>
+
+        <div class="btn_container">
+            <button (click)="cal_score()" [hidden]="hidesubmit">Submit Quiz</button><br><br>
+        </div>
+    </div>
+</div>

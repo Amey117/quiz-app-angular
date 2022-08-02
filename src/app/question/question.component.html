@@ -1,0 +1,4 @@
+<div class="questionset" [ngClass]="{leftborder_highlight:iscorrect}">
+    <div class="question"><h2 >{{number+1}})&nbsp;{{question.question}}</h2></div>
+    <button [disabled]="oncesubmitted" *ngFor="let opt of options;let i = index" [ngClass]="{'bgblue':highlight[i]}" (click)="ansgiven($event,number+1,i)" [value]="opt">{{opt}}</button>
+</div>

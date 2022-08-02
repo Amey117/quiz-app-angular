@@ -1,0 +1,15 @@
+.container{
+    /* border:1px solid red; */
+    max-width: 80%;
+    margin:0 auto;
+    margin-top: 7rem;
+}
+.container-child{
+    /* border:1px solid green; */
+    padding: .5rem;
+}
+.container button{
+    /* width: 50%; */
+    margin-left: .7rem;
+    font-size: 20px;
+}

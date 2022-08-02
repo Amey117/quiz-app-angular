@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div class="container-child">
+        <h3>Difficulty</h3>
+        <mat-form-field appearance="fill" required >
+            <mat-select [(value)]="diffselect" required>
+                <mat-option *ngFor="let opt of diff" [value]="opt">{{opt|uppercase}} </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="container-child">
+        <h3>Questions</h3>
+        <mat-form-field appearance="fill" required>
+            <mat-select [(value)]="nselect" required>
+                <mat-option *ngFor="let opt of no_questions" [value]="opt">{{opt}} </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+
+    <div class="container-child">
+        <h3>Category</h3>
+        <mat-form-field appearance="fill" required>
+            <mat-select [(value)]="selected" required>
+                <mat-option *ngFor="let opt of cat_list" [value]="opt">{{opt}} </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <button (click)="onstart()" mat-raised-button color="accent">Start</button>
+</div>
+
+
